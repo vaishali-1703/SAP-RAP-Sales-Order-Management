@@ -1,0 +1,17 @@
+@EndUserText.label : 'Customer Master Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztcust {
+
+  key client      : abap.clnt not null;
+  key customer_id : abap.char(10) not null;
+  first_name      : abap.char(40);
+  last_name       : abap.char(40);
+  email           : abap.char(60);
+  phone           : abap.char(15);
+  city            : abap.char(40);
+  last_changed_at : abp_lastchange_tstmpl;
+
+}

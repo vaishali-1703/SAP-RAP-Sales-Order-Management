@@ -1,0 +1,17 @@
+@EndUserText.label : 'Sales Order Item Draft Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztsoi_d {
+
+  key client     : abap.clnt not null;
+  key salesorder : abap.char(10) not null;
+  key itemnumber : abap.numc(6) not null;
+  productname    : abap.char(50);
+  quantity       : abap.int4;
+  unitprice      : abap.dec(15,2);
+  itemamount     : abap.dec(15,2);
+  "%admin"       : include sych_bdl_draft_admin_inc;
+
+}

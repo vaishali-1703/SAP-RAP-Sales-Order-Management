@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer Service Definition'
+define service ZSD_SALES_CUST {
+  expose ZC_SALES_CUST as Customer;
+}

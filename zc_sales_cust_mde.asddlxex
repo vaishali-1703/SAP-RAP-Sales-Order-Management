@@ -1,0 +1,37 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+    typeName: 'Customer',
+    typeNamePlural: 'Customers',
+    title: {
+        type: #STANDARD,
+        value: 'CustomerID'
+    }
+}
+
+annotate entity ZR_SALES_CUST with
+{
+    @UI.lineItem: [{ position: 10 }]
+    @UI.identification: [{ position: 10 }]
+    CustomerID;
+
+    @UI.lineItem: [{ position: 20 }]
+    @UI.identification: [{ position: 20 }]
+    FirstName;
+
+    @UI.lineItem: [{ position: 30 }]
+    @UI.identification: [{ position: 30 }]
+    LastName;
+
+    @UI.lineItem: [{ position: 40 }]
+    @UI.identification: [{ position: 40 }]
+    Email;
+
+    @UI.lineItem: [{ position: 50 }]
+    @UI.identification: [{ position: 50 }]
+    Phone;
+
+    @UI.lineItem: [{ position: 60 }]
+    @UI.identification: [{ position: 60 }]
+    City;
+}

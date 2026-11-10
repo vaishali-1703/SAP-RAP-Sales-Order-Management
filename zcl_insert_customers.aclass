@@ -1,0 +1,54 @@
+CLASS zcl_insert_customers DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC.
+
+  PUBLIC SECTION.
+    INTERFACES if_oo_adt_classrun.
+
+ENDCLASS.
+
+
+CLASS zcl_insert_customers IMPLEMENTATION.
+
+  METHOD if_oo_adt_classrun~main.
+
+    DATA lt_customers TYPE TABLE OF ztcust.
+
+    lt_customers = VALUE #(
+      ( client = sy-mandt
+        customer_id = 'CUST000001'
+        first_name = 'Rahul'
+        last_name = 'Sharma'
+        email = 'rahul@gmail.com'
+        phone = '9876543210'
+        city = 'Pune' )
+
+      ( client = sy-mandt
+        customer_id = 'CUST000002'
+        first_name = 'Priya'
+        last_name = 'Patil'
+        email = 'priya@gmail.com'
+        phone = '9876543211'
+        city = 'Mumbai' )
+
+      ( client = sy-mandt
+        customer_id = 'CUST000003'
+        first_name = 'Amit'
+        last_name = 'Desai'
+        email = 'amit@gmail.com'
+        phone = '9876543212'
+        city = 'Nashik' )
+    ).
+
+    INSERT ztcust FROM TABLE @lt_customers.
+
+    IF sy-subrc = 0.
+      out->write( 'Customer records inserted successfully!' ).
+    ELSE.
+      out->write( 'Error: Records could not be inserted.' ).
+    ENDIF.
+
+  ENDMETHOD.
+
+ENDCLASS.

@@ -1,0 +1,16 @@
+@EndUserText.label : 'Sales Order Item'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztsoi {
+
+  key client      : abap.clnt not null;
+  key sales_order : abap.char(10) not null;
+  key item_number : abap.numc(6) not null;
+  product_name    : abap.char(50);
+  quantity        : abap.int4;
+  unit_price      : abap.dec(15,2);
+  item_amount     : abap.dec(15,2);
+
+}

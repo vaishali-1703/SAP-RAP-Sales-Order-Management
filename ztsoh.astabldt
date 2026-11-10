@@ -1,0 +1,17 @@
+@EndUserText.label : 'Sales Order Header'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztsoh {
+
+  key client      : abap.clnt not null;
+  key sales_order : abap.char(10) not null;
+  customer_id     : abap.char(10);
+  order_date      : abap.dats;
+  total_amount    : abap.dec(15,2);
+  currency_code   : abap.cuky;
+  order_status    : abap.char(20);
+  last_changed_at : abp_locinst_lastchange_tstmpl;
+
+}

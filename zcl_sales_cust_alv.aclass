@@ -1,0 +1,20 @@
+CLASS zcl_sales_cust_alv DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC.
+
+  PUBLIC SECTION.
+    METHODS display_alv.
+
+ENDCLASS.
+
+
+CLASS zcl_sales_cust_alv IMPLEMENTATION.
+
+  METHOD display_alv.
+
+    DATA lo_alv TYPE REF TO cl_salv_table.
+
+  ENDMETHOD.
+
+ENDCLASS.

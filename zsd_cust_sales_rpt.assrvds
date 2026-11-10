@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer Sales Report Service'
+define service ZSD_CUST_SALES_RPT {
+  expose ZC_CUST_SALES_RPT;
+}

@@ -1,0 +1,47 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_SALES_ORDER
+    with
+{
+    @UI.facet: [
+        {
+            id: 'OrderInfo',
+            purpose: #STANDARD,
+            type: #IDENTIFICATION_REFERENCE,
+            label: 'Sales Order Information',
+            position: 10
+        },
+        {
+            id: 'OrderItems',
+            purpose: #STANDARD,
+            type: #LINEITEM_REFERENCE,
+            label: 'Sales Order Items',
+            position: 20,
+            targetElement: '_Items'
+        }
+    ]
+
+    @UI.lineItem: [{ position: 10 }]
+    @UI.identification: [{ position: 10, label: 'Sales Order ID' }]
+    SalesOrder;
+
+    @UI.lineItem: [{ position: 20 }]
+    @UI.identification: [{ position: 20, label: 'Customer ID' }]
+    CustomerID;
+
+    @UI.lineItem: [{ position: 30 }]
+    @UI.identification: [{ position: 30, label: 'Order Date' }]
+    OrderDate;
+
+    @UI.lineItem: [{ position: 40 }]
+    @UI.identification: [{ position: 40, label: 'Total Amount' }]
+    TotalAmount;
+
+    @UI.lineItem: [{ position: 50 }]
+    @UI.identification: [{ position: 50, label: 'Currency' }]
+    CurrencyCode;
+
+    @UI.lineItem: [{ position: 60 }]
+    @UI.identification: [{ position: 60, label: 'Order Status' }]
+    OrderStatus;
+}

@@ -1,0 +1,37 @@
+
+@Metadata.layer: #CORE
+
+annotate entity ZC_CUST_SALES_RPT
+    with
+{
+    @UI.lineItem: [{ position: 10, label: 'Sales Order' }]
+    @UI.selectionField: [{ position: 10 }]
+    SalesOrder;
+
+    @UI.lineItem: [{ position: 20, label: 'Customer ID' }]
+    @UI.selectionField: [{ position: 20 }]
+    CustomerID;
+
+    @UI.lineItem: [{ position: 30, label: 'First Name' }]
+    FirstName;
+
+    @UI.lineItem: [{ position: 40, label: 'Last Name' }]
+    LastName;
+
+    @UI.lineItem: [{ position: 50, label: 'Email' }]
+    Email;
+
+    @UI.lineItem: [{ position: 60, label: 'Order Date' }]
+    @UI.selectionField: [{ position: 30 }]
+    OrderDate;
+
+    @UI.lineItem: [{ position: 70, label: 'Total Amount' }]
+    TotalAmount;
+
+    @UI.lineItem: [{ position: 80, label: 'Currency' }]
+    CurrencyCode;
+
+    @UI.lineItem: [{ position: 90, label: 'Order Status' }]
+    @UI.selectionField: [{ position: 40 }]
+    OrderStatus;
+}
